@@ -64,6 +64,15 @@ void drawGuitar()
  ellipse(x-600, y-750, buttonWidth-10, buttonHeight-10);
 }
 
+void GuitarButton()
+{
+  if(dist(mouseX,mouseY,x-600,y-750)<100)
+  {
+    fill(248,195,205,180);
+    ellipse(x-600, y-750, buttonWidth-10, buttonHeight-10);
+  }
+}
+
 void drawVoice()
 {
  fill(250);
@@ -85,6 +94,15 @@ void drawVoice()
  line(x-740, y-490, x-740, y-450);
  line(x-750, y-490, x-750, y-450);
  ellipse(x-750, y-450, buttonWidth-10, buttonHeight-10);
+}
+
+void VoiceButton()
+{
+  if(dist(mouseX,mouseY,x-750,y-450)<100)
+  {
+    fill(248,195,205,180);
+    ellipse(x-750, y-450, buttonWidth-10, buttonHeight-10);
+  }
 }
 
 
@@ -112,6 +130,15 @@ void drawHeartbeat()
 
 }
 
+void HeartbeatButton()
+{
+  if(dist(mouseX,mouseY,x-600,y-150)<100)
+  {
+    fill(248,195,205,180);
+    ellipse(x-600, y-150, buttonWidth-10, buttonHeight-10);
+  }
+}
+
 void drawHarmony()
 {
  fill(250);
@@ -132,6 +159,15 @@ void drawHarmony()
  ellipse(x+600, y-750, buttonWidth-10, buttonHeight-10);
 }
 
+void HarmonyButton()
+{
+  if(dist(mouseX,mouseY,x+600,y-750)<100)
+  {
+    fill(248,195,205,180);
+    ellipse(x+600, y-750, buttonWidth-10, buttonHeight-10);
+  }
+}
+
 void drawHighbeat()
 {
  fill(250);
@@ -147,6 +183,16 @@ void drawHighbeat()
  strokeWeight(1);
  line( x+600, y-444, x+850, y-444);
  ellipse(x+750, y-450, buttonWidth-10, buttonHeight-10);
+}
+
+
+void HighbeatButton()
+{
+  if(dist(mouseX,mouseY,x+750,y-450)<100)
+  {
+    fill(248,195,205,180);
+    ellipse(x+750, y-450, buttonWidth-10, buttonHeight-10);
+  }
 }
 
 void drawKeyboard()
@@ -169,12 +215,48 @@ void drawKeyboard()
  ellipse(x+600, y-150, buttonWidth-10, buttonHeight-10);
 }
 
+void KeyboardButton()
+{
+  if(dist(mouseX,mouseY,x+600,y-150)<100)
+  {
+    fill(248,195,205,180);
+    ellipse(x+600, y-150, buttonWidth-10, buttonHeight-10);
+  }
+}
+
 void drawPlay()
 {
   fill(255);
   triangle(x-80, y-20, x-80, y+50, x-40, y+15);
   rect( x+40, y-20, 10, 70);
   rect( x+60, y-20, 10, 70);
+  stroke(255);
+  noFill();
+  rect(x-100,y-25,75,80);
+  rect(x+15,y-25,75,80);
+}
+
+void PlayButton()
+{
+  if(mouseX > x-100 && mouseX < x-15 && mouseY > y-25 && mouseY < y+55)
+  {
+    fill(248,195,205,180);
+    triangle(x-80, y-20, x-80, y+50, x-40, y+15);
+    if(mousePressed)
+    {
+
+    }
+  }
+}
+
+void StopButton()
+{
+  if(mouseX > x+15 && mouseX < x+80 && mouseY > y-25 && mouseY < y+55)
+  {
+    fill(248,195,205,180);
+    rect( x+40, y-20, 10, 70);
+    rect( x+60, y-20, 10, 70);
+  }
 }
 
 void render ()
