@@ -64,7 +64,8 @@ void drawGuitar()
  ellipse(x-600, y-750, buttonWidth-10, buttonHeight-10);
 }
 
-void GuitarButton() //*here figure out how to mute each layer when their button clicked, then when clicked again unmute
+//*here (& for all buttons) figure out how to mute each layer when their button clicked, then when clicked again unmute
+void GuitarButton() 
 {
   if(dist(mouseX,mouseY,x-600,y-750)<100)
   {

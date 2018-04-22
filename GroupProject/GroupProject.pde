@@ -56,6 +56,7 @@ void draw ()
  m.PlayButton();
  m.StopButton();
  
+ //* Stage 1 = 100>20, Stage 2 = 100>40, Stage 3 = 100>60, Stage 4 = 100>80, Stage 5 = 100>99?
  float myHeight = 380;
   for(int i = 725 ; i < 1275; i ++)
   {
@@ -63,6 +64,7 @@ void draw ()
     line(i, myHeight, i, myHeight +(ai.left.get(i)* 100));
    if(ai.left.get(i)* 100 > 20)
    {
+     
     /* write the code here to draw something 
     when the pithch is higher than certain number.*/
    }
